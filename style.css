@@ -1,3 +1,8 @@
+html{
+
+    scroll-behavior:smooth;
+
+}
 *{
 margin:0;
 padding:0;
@@ -19,17 +24,18 @@ overflow-x:hidden;
 }
 
 nav{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    padding:18px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(7,23,38,.75);
-    backdrop-filter:blur(12px);
-    z-index:1000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+    background: rgba(7,23,38,.95);
+    backdrop-filter: blur(12px);
+
 }
 
 nav ul{
@@ -781,5 +787,47 @@ transform:scale(1.08);
 100%{
 transform:scale(1);
 }
+
+}
+/* BOTÓN VOLVER ARRIBA */
+
+#btn-arriba{
+
+    position: fixed;
+
+    bottom: 110px;
+
+    right: 30px;
+
+    width: 55px;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #00BFFF;
+
+    color: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    z-index: 10000;
+
+    display: none;
+
+    box-shadow: 0 0 20px rgba(0,191,255,.4);
+
+}
+#btn-arriba:hover{
+
+    transform: scale(1.15);
+
+    background:#0095cc;
 
 }

@@ -54,3 +54,27 @@ contadores.forEach(contador => {
 
 });
 console.log("JavaScript funcionando");
+window.addEventListener("load", () => {
+
+    const botonArriba = document.getElementById("btn-arriba");
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 400) {
+            botonArriba.style.display = "block";
+        } else {
+            botonArriba.style.display = "none";
+        }
+
+    });
+
+    botonArriba.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+});
